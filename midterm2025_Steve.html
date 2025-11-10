@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Steve">
+
+<title>Midterm</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="midterm2025_Steve_files/libs/clipboard/clipboard.min.js"></script>
+<script src="midterm2025_Steve_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="midterm2025_Steve_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="midterm2025_Steve_files/libs/quarto-html/popper.min.js"></script>
+<script src="midterm2025_Steve_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="midterm2025_Steve_files/libs/quarto-html/anchor.min.js"></script>
+<link href="midterm2025_Steve_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="midterm2025_Steve_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="midterm2025_Steve_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="midterm2025_Steve_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="midterm2025_Steve_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Midterm</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Steve </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<ol type="1">
+<li><p>What is the key difference between traditional AI and generative AI? Write in your own words.</p>
+<p><strong>Traditional AI analyzes and predicts, while generative AI creates</strong>.</p></li>
+<li><p>What major advancement in AI was introduced by Google Brain in 2017?</p>
+<p><strong>Google Brain introduced the Transformer architecture in the paper <em>“Attention Is All You Need.”</em></strong></p></li>
+<li><p>What hardware component is essential for speeding up AI training?</p>
+<p><strong>Hardware for speeding up AI training is the GPU (Graphics Processing Unit).</strong></p></li>
+<li><p>In your own words, what is a language model, and what are some real-life examples of language model applications?</p>
+<p><strong>A language model is a type of AI that learns how language works so it can understand or generate human-like text.</strong> <strong>Chatbots (like ChatGPT or customer support bots)Autocomplete and spellcheck in your phone or email</strong></p></li>
+<li><p>What is the Markov assumption? Why do we use it instead of looking at entire sentences?</p>
+<p><strong>The Markov assumption is the idea that to predict the next word in a sentence, we only need to look at a few recent words, not the entire sentence.We use it because it simplifies the problem looking at the entire sentence is much more complex and slower. The Markov assumption helps models run faster and require less memory, especially in older or simpler language models.</strong></p></li>
+</ol>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<section id="load-libraries" class="level4">
+<h4 class="anchored" data-anchor-id="load-libraries">1) Load libraries</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.1) load library for text processing</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext) </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.2) load library for accessing Project Gutenberg</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gutenbergr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.3) load library for ngram</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ngram)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.4) load library for data wrangling</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.2
+✔ ggplot2   4.0.0     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.1.0     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+</section>
+<section id="download-alices-adventures-in-wonderland-by-lewis-caroll" class="level4">
+<h4 class="anchored" data-anchor-id="download-alices-adventures-in-wonderland-by-lewis-caroll">2) Download Alice’s Adventures in Wonderland by Lewis Caroll</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.5) Download "Alice's Adventures in Wonderland" by Lewis Caroll from Project Gutenberg and name the text alice0</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>alice0 <span class="ot">&lt;-</span> <span class="fu">gutenberg_download</span>(<span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Determining mirror for Project Gutenberg from
+https://www.gutenberg.org/robot/harvest.
+Using mirror http://aleph.gutenberg.org.</code></pre>
+</div>
+</div>
+</section>
+<section id="clean-up-text-data" class="level4">
+<h4 class="anchored" data-anchor-id="clean-up-text-data">3) Clean up text data</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The following codes will clean up the text. </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>alice1<span class="ot">&lt;-</span>alice0<span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">66</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(text, <span class="st">"^</span><span class="sc">\\</span><span class="st">s*$"</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_replace_all</span>(text, <span class="st">"_"</span>, <span class="st">" "</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">str_replace_all</span>(text, <span class="st">"!([^</span><span class="sc">\\</span><span class="st">s])"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>),         </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">str_replace_all</span>(text, <span class="st">"[[:punct:]&amp;&amp;[^.!]]"</span>, <span class="st">""</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">%&gt;%</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(text, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>alice2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(alice1<span class="sc">$</span>text, <span class="at">collapse =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-ngrams" class="level4">
+<h4 class="anchored" data-anchor-id="create-ngrams">4) Create ngrams</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.6) Create a bigram model object and name it alice_bi</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>alice_bi <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">2</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.7) Create a trigram model object and name it alice_tri</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>alice_tri <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">3</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.8) Create a quadrigram model object and name it alice_quad</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>alice_quad <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">4</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.9) Create a 10-gram model object and name it alice10</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>alice10 <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">10</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.10) Create a 20-gram model object and name it alice20</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>alice20 <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">20</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.11) Create a 30-gram model object and name it alice30</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>alice30 <span class="ot">&lt;-</span> <span class="fu">ngram</span>(alice2, <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="generate-sentences-using-the-n-gram-models" class="level4">
+<h4 class="anchored" data-anchor-id="generate-sentences-using-the-n-gram-models">5) Generate sentences using the n-gram models</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.12) Set seed to 1 and generate sentences using the bigram model. The sentence should be 30 words long.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice_bi, <span class="dv">30</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "very earnestly. Ive had such a puzzled expression that she might what a Gryphon lying fast asleep in the long hall and wander about among those beds of bright flowers "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.13) Set seed to 2 and generate sentences using the trigram model. The sentence should be 30 words long.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice_tri, <span class="dv">30</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Dodo. Then they all crowded round it panting and asking But who has won This question the Dodo could not answer without a great deal too far off to trouble "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.14) Set seed to 3 and generate sentences using the quadrigram model. The sentence should be 30 words long.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice_quad, <span class="dv">30</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "FishFootman was gone and the other was sitting on the top with its arms folded quietly smoking a long hookah and taking not the smallest notice of her or of "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.15) Set seed to 4 and generate sentences using the 10-gram model. The sentence should be 30 words long.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice10, <span class="dv">30</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "They very soon came upon a Gryphon lying fast asleep in the sun. If you dont know what a Gryphon is look at the picture. Up lazy thing said the "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.16) Set seed to 5 and generate sentences using the 20-gram model. The sentence should be 30 words long.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice20, <span class="dv">30</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "thing and longed to change the subject. Go on with the next verse the Gryphon repeated impatiently it begins I passed by his garden . Alice did not dare to "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.17) Set seed to 6 and generate sentences using the 30-gram model. The sentence should be 30 words long.</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(alice30, <span class="dv">30</span>, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "consented to go on. And so these three little sistersthey were learning to draw What did they draw said Alice quite forgetting her promise. Treacle said the Dormouse without considering "</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.18) What is the most common bigram in the text and how often was it used?</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice_bi), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         ngrams freq        prop
+1     said the   206 0.007823181
+2       of the   125 0.004747076
+3         in a    95 0.003607778
+4   said Alice    82 0.003114082
+5       in the    77 0.002924199
+6      and the    73 0.002772292
+7       to the    69 0.002620386
+8       at the    60 0.002278596
+9       it was    59 0.002240620
+10    a little    56 0.002126690
+11     she had    56 0.002126690
+12      as she    56 0.002126690
+13       to be    50 0.001898830
+14    the Mock    49 0.001860854
+15     she was    49 0.001860854
+16   the Queen    46 0.001746924
+17 Mock Turtle    45 0.001708947
+18     went on    43 0.001632994
+19     and she    43 0.001632994
+20    the King    43 0.001632994</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.19) What is the most common trigram in the text and how often was it used?</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice_tri), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   ngrams freq         prop
+1        the Mock Turtle    40 0.0015191219
+2          said the King    19 0.0007215829
+3       the White Rabbit    19 0.0007215829
+4          said the Mock    19 0.0007215829
+5         the March Hare    19 0.0007215829
+6        said to herself    17 0.0006456268
+7            she said to    17 0.0006456268
+8            she went on    14 0.0005316927
+9             one of the    14 0.0005316927
+10      said the Duchess    13 0.0004937146
+11       said the Hatter    12 0.0004557366
+12          as she could    12 0.0004557366
+13 said the Caterpillar.    12 0.0004557366
+14           said to the    11 0.0004177585
+15           a minute or    11 0.0004177585
+16            out of the    11 0.0004177585
+17         minute or two    11 0.0004177585
+18        said the King.    10 0.0003797805
+19      said the Gryphon    10 0.0003797805
+20           it said the    10 0.0003797805</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.20) What is the most common quadrigram in the text and how often was it used?</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice_quad), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   ngrams freq         prop
+1    she said to herself    14 0.0005317129
+2   said the Mock Turtle    13 0.0004937334
+3        a minute or two    10 0.0003797949
+4   said the March Hare.     7 0.0002658564
+5        said Alice in a     7 0.0002658564
+6      the moral of that     6 0.0002278769
+7  said the Mock Turtle.     6 0.0002278769
+8         as well as she     6 0.0002278769
+9           in a tone of     6 0.0002278769
+10 the little golden key     5 0.0001898975
+11  said the Duchess and     5 0.0001898975
+12     she said this she     5 0.0001898975
+13     said the King and     5 0.0001898975
+14     I beg your pardon     5 0.0001898975
+15 said the White Rabbit     4 0.0001519180
+16       seemed to be no     4 0.0001519180
+17      and when she had     4 0.0001519180
+18      out of its mouth     4 0.0001519180
+19      at the bottom of     4 0.0001519180
+20      I should like to     4 0.0001519180</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.21) What is the most common 10-gram in the text and how often was it used?</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice10), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                       ngrams freq         prop
+1       the Caterpillar took the hookah out of its mouth and     2 7.597630e-05
+2              the dance Will you wont you will you wont you     2 7.597630e-05
+3          not join the dance. Would not could not would not     2 7.597630e-05
+4        join the dance. Would not could not would not could     2 7.597630e-05
+5             and shouting Off with his head or Off with her     2 7.597630e-05
+6      the White Rabbit blew three blasts on the trumpet and     2 7.597630e-05
+7        would not join the dance. Would not could not would     2 7.597630e-05
+8            shouting Off with his head or Off with her head     2 7.597630e-05
+9         the dance. Would not could not would not could not     2 7.597630e-05
+10            join the dance Will you wont you will you wont     2 7.597630e-05
+11 made her feel very sleepy and stupid whether the pleasure     1 3.798815e-05
+12     account of the game feeling very glad she had someone     1 3.798815e-05
+13        thing she heard was a general chorus of There goes     1 3.798815e-05
+14          time she said to herself and began by taking the     1 3.798815e-05
+15                and when she went back to the table for it     1 3.798815e-05
+16       Ill stay down here till Im somebody elsebut oh dear     1 3.798815e-05
+17      them thought Alice or perhaps they wont walk the way     1 3.798815e-05
+18                shant be able! I shall be a great deal too     1 3.798815e-05
+19                  a little bit of stick and held it out to     1 3.798815e-05
+20             but on being pinched by the Hatter it woke up     1 3.798815e-05</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.22) What is the most common 20-gram in the text and how often was it used?</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice20), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                                                                                      ngrams
+1            Alice. But youre so easily offended you know The Mouse only growled in reply. Please come back and finish your 
+2                          kissed her and said It was a curious dream dear certainly but now run in to your tea its getting 
+3                  on with the next verse the Gryphon repeated impatiently it begins I passed by his garden . Alice did not 
+4               course they were said the Dormouse well in. This answer so confused poor Alice that she let the Dormouse go 
+5                                it. Dont let him know she liked them best For this must ever be A secret kept from all the 
+6      advisable to go with Edgar Atheling to meet William and offer him the crown. Williams conduct at first was moderate. 
+7          door had vanished completely. Very soon the Rabbit noticed Alice as she went hunting about and called out to her 
+8            the great question is what The great question certainly was what Alice looked all round her at the flowers and 
+9                        into the air. as far out to sea as you can Swim after them screamed the Gryphon. Turn a somersault 
+10                  and see how the game was going on as she heard the Queens voice in the distance screaming with passion. 
+11                           mad. But I dont want to go among mad people Alice remarked. Oh you cant help that said the Cat 
+12                         she was talking. How can I have done that she thought. I must be growing small again. She got up 
+13        games now. CHAPTER X. The Lobster Quadrille The Mock Turtle sighed deeply and drew the back of one flapper across 
+14                     said in an encouraging tone. Alice looked all round the table but there was nothing on it but tea. I 
+15                        Hatter it woke up again with a little shriek and went on that begins with an M such as mousetraps 
+16                                 on now my dear it continued turning to Alice as it spoke. As wet as ever said Alice in a 
+17                            listening this time as it didnt sound at all the right word but I shall have to ask them what 
+18                        in the long hall and close to the little glass table. Now Ill manage better this time she said to 
+19                        blows hurt it or not. Oh please mind what youre doing cried Alice jumping up and down in an agony 
+20 heads and the procession moved on three of the soldiers remaining behind to execute the unfortunate gardeners who ran to 
+   freq         prop
+1     1 3.800258e-05
+2     1 3.800258e-05
+3     1 3.800258e-05
+4     1 3.800258e-05
+5     1 3.800258e-05
+6     1 3.800258e-05
+7     1 3.800258e-05
+8     1 3.800258e-05
+9     1 3.800258e-05
+10    1 3.800258e-05
+11    1 3.800258e-05
+12    1 3.800258e-05
+13    1 3.800258e-05
+14    1 3.800258e-05
+15    1 3.800258e-05
+16    1 3.800258e-05
+17    1 3.800258e-05
+18    1 3.800258e-05
+19    1 3.800258e-05
+20    1 3.800258e-05</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.23) What is the most common 30-gram in the text and how often was it used?</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">get.phrasetable</span>(alice30), <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                                                                                                                                          ngrams
+1                                       the air Im afraid but you might catch a bat and thats very like a mouse you know. But do cats eat bats I wonder And here Alice began to 
+2                        all locked and when Alice had been all the way down one side and up the other trying every door she walked sadly down the middle wondering how she was 
+3                                       Ive got to do said Alice to herself as she wandered about in the wood is to grow to my right size again and the second thing is to find 
+4  The Queens CroquetGround A large rosetree stood near the entrance of the garden the roses growing on it were white but there were three gardeners at it busily painting them 
+5                    near her she began in a low timid voice If you please sir The Rabbit started violently dropped the white kid gloves and the fan and skurried away into the 
+6                 jurybox with the edge of her skirt upsetting all the jurymen on to the heads of the crowd below and there they lay sprawling about reminding her very much of 
+7                         and feebly stretching out one paw trying to touch her. Poor little thing said Alice in a coaxing tone and she tried hard to whistle to it but she was 
+8                           you a couple You are old said the youth and your jaws are too weak For anything tougher than suet Yet you finished the goose with the bones and the 
+9                                    on your shoes and stockings for you now dears Im sure I shant be able! I shall be a great deal too far off to trouble myself about you you 
+10                    railway she said to herself. Alice had been to the seaside once in her life and had come to the general conclusion that wherever you go to on the English 
+11                           whenever I eat or drink anything so Ill just see what this bottle does. I do hope itll make me grow large again for really Im quite tired of being 
+12                               It tells the day of the month and doesnt tell what oclock it is Why should it muttered the Hatter. Does your watch tell you what year it is Of 
+13                               mad here. Im mad. Youre mad. How do you know Im mad said Alice. You must be said the Cat or you wouldnt have come here. Alice didnt think that 
+14                             the Gryphon with a bound into the air. as far out to sea as you can Swim after them screamed the Gryphon. Turn a somersault in the sea cried the 
+15                               giving it something out of a bottle. They all made a rush at Alice the moment she appeared but she ran off as hard as she could and soon found 
+16                   done with a whiting. Now you know. And what are they made of Alice asked in a tone of great curiosity. Soles and eels of course the Gryphon replied rather 
+17   in reply. Thats right shouted the Queen. Can you play croquet The soldiers were silent and looked at Alice as the question was evidently meant for her. Yes shouted Alice. 
+18                          not sneeze were the cook and a large cat which was sitting on the hearth and grinning from ear to ear. Please would you tell me said Alice a little 
+19               Mock Turtle repeated thoughtfully. I should like to hear her try and repeat something now. Tell her to begin. He looked at the Gryphon as if he thought it had 
+20                Ill look first she said and see whether its marked poison or not for she had read several nice little histories about children who had got burnt and eaten up 
+   freq         prop
+1     1 3.801703e-05
+2     1 3.801703e-05
+3     1 3.801703e-05
+4     1 3.801703e-05
+5     1 3.801703e-05
+6     1 3.801703e-05
+7     1 3.801703e-05
+8     1 3.801703e-05
+9     1 3.801703e-05
+10    1 3.801703e-05
+11    1 3.801703e-05
+12    1 3.801703e-05
+13    1 3.801703e-05
+14    1 3.801703e-05
+15    1 3.801703e-05
+16    1 3.801703e-05
+17    1 3.801703e-05
+18    1 3.801703e-05
+19    1 3.801703e-05
+20    1 3.801703e-05</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3" class="level2">
+<h2 class="anchored" data-anchor-id="part-3">Part 3</h2>
+<p>2.24) Compare sentences you generated in the “generation” chunk. Which model do you think generates more grammatical sentences? What do you think the reason is?</p>
+<p><strong>The n-gram models generate more grammatical and natural-sounding sentences. We have better predictions. A 30-gram model can look at the last 29 words before choosing the next one. This makes it very likely to repeat exact sequences from the original text.Models like bigrams don’t have enough context to maintain proper grammar or sentence structure. They choose the next word based on minimal history, leading to random or awkward combinations.</strong></p>
+<p>2.25) Based on the frequency tables in the “frequency” chunk, which model do you think will generate more original sentences? Why do you think so?</p>
+<p><strong>The n-gram models like bigram are more likely to generate original sentences. Models like 20-gramoften generate exact sequences from the text,because they memorize long word sequences.</strong></p>
+<p>2.26) What do you think you have been learning from this class? How do you think it will help you in the future? What else would you like to learn from this class?</p>
+<p><strong>In this class, I have learned how to work with text using code, learned how to clean text, find common word patterns like bigrams and trigrams, and even generate new sentences using n-gram models. This will help me in the future if I work in data science, AI, or anything related to language and computers. It also improves my coding and data analysis skills. I do like to learn how more advanced AI models like ChatGPT work, how to analyze the meaning or emotion of text, and how to use machine learning for text data.</strong></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
