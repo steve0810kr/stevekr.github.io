@@ -1,0 +1,8 @@
+---
+title: "korea view"
+format: html
+---
+
+![](images/south-korea-provinces-and-capital-map.jpg){width="445"}
+
+![](images/Featured-image-Gyeongbokgung-Palace-in-Seoul-South-Korea.jpg)
